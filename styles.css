@@ -500,6 +500,74 @@ footer {
     color: #ccc;
 }
 
+/* Go to top button - fixed bottom-right */
+.go-to-top-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 24px;
+    pointer-events: none;
+    z-index: 9999;
+    box-sizing: border-box;
+}
+
+.go-to-top-wrap .go-to-top {
+    pointer-events: auto;
+}
+
+.go-to-top {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    margin-left: auto;
+    border: none;
+    border-radius: 50%;
+    background: #2a5298;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 0;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(42, 82, 152, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-appearance: none;
+    appearance: none;
+    flex-shrink: 0;
+}
+
+.go-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.go-to-top:hover {
+    background: #1a3a5f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(42, 82, 152, 0.5);
+}
+
+.go-to-top-arrow {
+    display: block;
+    line-height: 1;
+    margin-top: -2px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .header-main {

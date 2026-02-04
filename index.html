@@ -960,7 +960,7 @@
                         <div class="contact-icon">📞</div>
                         <div class="contact-detail-text">
                             <h4>Phone</h4>
-                            <p><a href="tel:2724643131">272 464 3131</a></p>
+                            <p><a href="tel:+12724643131">+1 (272) 464-3131</a></p>
                         </div>
                     </div>
 
@@ -995,8 +995,12 @@
     </section>
 
     <footer>
-        <p>Copyright © 2024 Hiring Associates LLC - All Rights Reserved.</p>
+        <p>Copyright © 2026 Hiring Associates LLC - All Rights Reserved.</p>
     </footer>
+
+    <div class="go-to-top-wrap">
+        <button type="button" class="go-to-top" id="goToTop" aria-label="Go to top"><span class="go-to-top-arrow">↑</span></button>
+    </div>
 
     <script>
         // Scroll animations
@@ -1024,6 +1028,19 @@
                     target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
+        });
+
+        // Go to top button
+        const goToTopBtn = document.getElementById('goToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                goToTopBtn.classList.add('visible');
+            } else {
+                goToTopBtn.classList.remove('visible');
+            }
+        });
+        goToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>

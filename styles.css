@@ -479,6 +479,20 @@ footer {
     color: #ccc;
 }
 
+.footer-address {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.footer-address a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-address a:hover {
+    text-decoration: underline;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 20px;

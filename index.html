@@ -1,160 +1,862 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recruitment Strategies - Technology Jobs Hiring Recruitment</title>
-    <meta name="description" content="Hiring Associates offers hiring solutions and recruitment strategies & services to build your workforce as and when needed and with in the budget">
-    <meta name="author" content="hiringassociates.com">
-    <meta name="generator" content="Starfield Technologies; Go Daddy Website Builder 8.0.0000">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hiringassociates.com/">
-    <meta property="og:site_name" content="hiringassociates.com">
-    <meta property="og:title" content="human capital solution provider">
-    <meta property="og:description" content="engaged in providing temporary and permanent staffing solution. USA I UK I AUSTRALIA I CANADA">
-    <meta property="og:image" content="http://img1.wsimg.com/isteam/stock/110539">
-    <meta property="og:locale" content="en_IN">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="hiringassociates.com">
-    <meta name="twitter:description" content="human capital solution provider">
-    <meta name="twitter:image" content="http://img1.wsimg.com/isteam/stock/110539">
-    <meta name="twitter:image:alt" content="hiringassociates.com">
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#6F6F6F">
-    
-    <link rel="stylesheet" href="styles.css">
+    <title>Hiring Associates - Human Capital Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0F172A;
+            --accent: #3B82F6;
+            --accent-light: #60A5FA;
+            --text: #1E293B;
+            --text-light: #64748B;
+            --bg: #FFFFFF;
+            --bg-alt: #F8FAFC;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .logo-text {
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section - Full screen with diagonal split */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            margin-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('images/hero-banner.jpeg') center/cover;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+            opacity: 0.3;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-50px, 50px) scale(1.1); }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: #FFFFFF;
+            margin-bottom: 2rem;
+            letter-spacing: -3px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 1.2rem 3rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary {
+            padding: 1.2rem 3rem;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Stats Section - Overlapping */
+        .stats {
+            background: white;
+            margin: -80px auto 0;
+            max-width: 1200px;
+            position: relative;
+            z-index: 10;
+            border-radius: 24px;
+            padding: 4rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* About Section - Diagonal layout */
+        .about {
+            padding: 10rem 3rem;
+            background: var(--bg-alt);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: white;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 5rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .about-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .about-card:hover {
+            transform: translateY(-20px);
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s;
+        }
+
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .about-card-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .about-card-content {
+            padding: 2.5rem;
+        }
+
+        .about-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .about-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .about-card ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .about-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .about-card ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Services Section - Bento Box Layout */
+        .services {
+            padding: 8rem 3rem;
+            background: white;
+            position: relative;
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .bento-item {
+            background: var(--bg-alt);
+            border-radius: 32px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s;
+        }
+
+        .bento-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .bento-item.large {
+            grid-column: span 8;
+        }
+
+        .bento-item.medium {
+            grid-column: span 4;
+        }
+
+        .bento-item.small {
+            grid-column: span 6;
+        }
+
+        .bento-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: var(--gradient-1);
+            opacity: 0.05;
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .bento-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+        }
+
+        .bento-item h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .bento-item p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .bento-item ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .bento-item ul li {
+            padding: 0.6rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .bento-item ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* COE Section - Diagonal with image */
+        .coe {
+            padding: 8rem 3rem;
+            background: var(--primary);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coe::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: white;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+        }
+
+        .coe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .coe .section-title {
+            color: white;
+        }
+
+        .coe .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .coe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .coe-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.5s;
+        }
+
+        .coe-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-10px);
+        }
+
+        .coe-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .coe-card-content {
+            padding: 2.5rem;
+        }
+
+        .coe-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .coe-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section - Modern split */
+        .contact {
+            padding: 8rem 3rem;
+            background: var(--bg-alt);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            letter-spacing: -2px;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .contact-detail-text h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--primary);
+        }
+
+        .contact-detail-text p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .contact-detail-text a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .stats {
+                margin: 2rem auto;
+                padding: 2rem;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-grid,
+            .coe-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bento-item.large,
+            .bento-item.medium,
+            .bento-item.small {
+                grid-column: span 12;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-main">
+    <nav>
+        <div class="nav-container">
             <div class="logo">
-                <img src="images/logo.png" alt="Hiring Associates" style="max-height: 60px; width: auto;">
+                <img src="images/logo.png" alt="Hiring Associates">
+                <span class="logo-text">Hiring Associates</span>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#coe">COE Solutions</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#coe">Solutions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Human Capital Solution Provider</h1>
-            <p>Engaged in providing temporary and permanent staffing solutions.</p>
-            <a href="#contact" class="btn">Get in Touch</a>
+        <div class="hero-content">
+            <h1>Human Capital<br><span>Solution Provider</span></h1>
+            <p>Engaged in providing temporary and permanent staffing solutions for mission-critical IT needs.</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn-primary">Get Started →</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
         </div>
-        <a href="#about" class="scroll-down" aria-label="Scroll down">
-            <div class="scroll-down-arrow"></div>
-        </a>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about">
-        <div class="container">
+    <div class="stats">
+        <div class="stat-item">
+            <h3>15+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+            <h3>500+</h3>
+            <p>Clients Served</p>
+        </div>
+        <div class="stat-item">
+            <h3>98%</h3>
+            <p>Success Rate</p>
+        </div>
+        <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Support</p>
+        </div>
+    </div>
+
+    <section id="about" class="about">
+        <div class="about-container">
             <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle">Delivering exceptional staffing solutions for mission-critical IT needs</p>
+
             <div class="about-grid">
-                <div class="about-card">
-                    <img src="images/image18.jpg" alt="Building Workforce">
-                    <h3>Building Workforce</h3>
-                    <p>Hiring Associates is one of the fastest growing companies focused on providing staffing solutions to Telecom, Financial and Healthcare clients for their mission critical IT staffing needs.</p>
-                    <p>Hiring Associates plays a major role in identifying best fit human resources for its clients and acts as a bridge between the client and the candidate. We help our clients successfully respond and capitalize on opportunities by providing professional services in the areas of systems integration and Application Development.</p>
-                    <p>At Hiring Associates, we believe that our clients expect value for the money, and it is our goal to exceed their expectations, and provide cost effective recruitment and staffing solutions.</p>
-                    <p>Hiring Associates offers skill based training for its consultants to make them eligible for the high paced IT industry. We are one of the premier companies focused in SAP training. The HA Academy is created to help job seekers in enhancing their technical abilities for fetching a nice job opportunity in ERP market.</p>
-                    <p>Hiring Associates has established long-term relationships with major corporations in Financial Sector, Banking, Retail, Insurance, Manufacturing, Health care, Telecom and Transportation industries.</p>
-                    <p>Hiring Associates has a highly qualified & experienced team of professionals; our methodology combines people, technology and process to provide our clients with tangible, concise deliverables and a measurable return on investment.</p>
-                    <div style="margin-top: 20px;">
-                        <a href="#about" class="btn" style="display: inline-block;">Find out more</a>
+                <div class="about-card fade-in">
+                    <img src="images/image18.jpg" alt="Building Workforce" class="about-card-image">
+                    <div class="about-card-content">
+                        <h3>Building Workforce</h3>
+                        <p>Hiring Associates is one of the fastest growing companies focused on providing staffing solutions to Telecom, Financial and Healthcare clients for their mission critical IT staffing needs.</p>
+                        <p>We play a major role in identifying best fit human resources for our clients and act as a bridge between the client and the candidate. We help our clients successfully respond and capitalize on opportunities by providing professional services in the areas of systems integration and Application Development.</p>
+                        <p>We believe that our clients expect value for money, and it is our goal to exceed their expectations, and provide cost effective recruitment and staffing solutions.</p>
                     </div>
                 </div>
 
-                <div class="about-card">
-                    <img src="images/image19.jpg" alt="A Trusted Partner">
-                    <h3>A Trusted Partner</h3>
-                    <p>At Hiring Associates, we don't fill requisitions - we provide recruitment strategies & human capital solutions. Creating an "ideal" candidate on paper is not the best way to start looking for a new hire. Talking to Hiring Associates is.</p>
-                    <p>People are the often overlooked factor in a company's business plan, but we know that in order for your vision to be successful, you need a partner in human capital resources - not an order taker.</p>
-                    <p>By getting Hiring Associates involved at the strategic planning stage, we can help you ask the right questions and get the right answers, starting with why that position is open. Working from the goals you have set, we may well uncover possibilities never considered.</p>
-                    <p>Nowadays most organizations are on the look out for IT domain experts who can deliver quality work with minimal training. Because of high attrition rates of employees and cost of training for those who lack required skills, staff augmentation has become the need of the hour.</p>
-                    <p><strong>Our services:</strong></p>
-                    <ul>
-                        <li>Help to achieve business goals, faster time to market and minimize the cost of training.</li>
-                        <li>Provide the flexibility to obtain resources to gear up for projects that require specialized skills that don't exist or can't be leveraged internally.</li>
-                        <li>Provide faster project delivery, accelerating the quality and speed of development at the same time saving cost and time for internal training and skill development.</li>
-                        <li>Add staff as needed without incurring the need to bear the cost and liabilities of full time employees.</li>
-                    </ul>
-                    <p><strong>We have deployed skill sets across following domains:</strong></p>
-                    <div class="domain-list">
-                        <span class="domain-tag">Telecom</span>
-                        <span class="domain-tag">Retail</span>
-                        <span class="domain-tag">Financial & Banking</span>
-                        <span class="domain-tag">Insurance</span>
-                        <span class="domain-tag">Health Care</span>
-                        <span class="domain-tag">Energy</span>
-                        <span class="domain-tag">Manufacturing</span>
+                <div class="about-card fade-in">
+                    <img src="images/image19.jpg" alt="A Trusted Partner" class="about-card-image">
+                    <div class="about-card-content">
+                        <h3>A Trusted Partner</h3>
+                        <p>At Hiring Associates, we don't fill requisitions - we provide recruitment strategies & human capital solutions. Creating an "ideal" candidate on paper is not the best way to start looking for a new hire.</p>
+                        <p>People are the often overlooked factor in a company's business plan. We know that in order for your vision to be successful, you need a partner in human capital resources - not an order taker.</p>
+                        <ul>
+                            <li>Achieve business goals with faster time to market</li>
+                            <li>Flexible resource allocation for specialized projects</li>
+                            <li>Faster project delivery with quality assurance</li>
+                            <li>Cost-effective staff augmentation solutions</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="about-card">
-                    <img src="images/image20.jpg" alt="Human Capital Solution Provider">
-                    <h3>Human Capital Solution Provider</h3>
-                    <p>The purpose of turnkey solution is to meet the sole need of effective hiring efficiently. Companies use various channels to ensure that the results are fast and cost effective. We help companies in hiring the best candidate from within or outside the organization in a most timely and cost effective manner.</p>
-                    <p>Our organization understands the clients needs and offers full cycle direct recruitment services to provide seamless access to highly talented professionals to meet the strategic and long term requirement. We also enable extensive pre screening and evaluation of profiles to get the best and most promising professional.</p>
-                    <p>We customize end to end recruitment solutions with a focus to minimize on cost of recruitment and to ensure optimal results. Our USP is to provide recruitments from the junior most to the senior levels and take care of the entire process from placing advertisement to in house services.</p>
-                    <ul>
-                        <li>We enable extensive pre screening and evaluation of profiles to get the best and most promising professional.</li>
-                        <li>We do comprehensive market research and study on the skill requirement based on the clients requirement.</li>
-                        <li>We customize end to end recruitment solutions with a focus to minimize on cost of recruitment and to ensure optimal results.</li>
-                        <li>We have an enthusiastic and committed team to provide highly trained candidates.</li>
-                        <li>We provide recruitments from the junior most to the senior levels and take care of the entire process from placing advertisement to in house services.</li>
-                        <li>Our extensive database, well defined and planned approach allows us to provide client specific requirement at economical rates.</li>
-                    </ul>
+                <div class="about-card fade-in">
+                    <img src="images/image20.jpg" alt="Turnkey Solutions" class="about-card-image">
+                    <div class="about-card-content">
+                        <h3>Turnkey Solutions</h3>
+                        <p>We help companies hire the best candidates from within or outside the organization in the most timely and cost effective manner.</p>
+                        <ul>
+                            <li>Extensive pre-screening and evaluation</li>
+                            <li>Comprehensive market research</li>
+                            <li>End-to-end recruitment solutions</li>
+                            <li>Highly trained candidate pool</li>
+                            <li>Junior to senior level placements</li>
+                            <li>Economical, client-specific solutions</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Offerings Section -->
-    <section id="services" style="background: #f9f9f9;">
-        <div class="container">
+    <section id="services" class="services">
+        <div class="services-container">
             <h2 class="section-title">Service Offerings</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="images/image21.jpg" alt="Staff Augmentation">
-                    <h3>Staff Augmentation</h3>
-                    <ul>
-                        <li>Staff Augmentation</li>
-                        <li>IT Skill Enhancement Programs</li>
-                        <li>Recruitment Process Outsourcing</li>
-                        <li>Turnkey Recruitment Solution</li>
-                    </ul>
-                </div>
+            <p class="section-subtitle">Comprehensive solutions tailored to your business needs</p>
 
-                <div class="service-card">
+            <div class="bento-grid">
+                <div class="bento-item large fade-in">
                     <img src="images/image22.jpg" alt="Enterprise Application">
                     <h3>Enterprise Application</h3>
-                    <p>We offer Enterprise Application services portfolio, with strong capabilities in world-leading applications that are scalable, distributed, component based, mission critical, data centric and data friendly. These applications are deployed on various platforms.</p>
-                    <p><strong>Our competency includes:</strong></p>
+                    <p>World-leading enterprise applications that are scalable, distributed, component-based, mission critical, and data-centric.</p>
                     <ul>
-                        <li>SAP</li>
-                        <li>Oracle Applications (EBS)</li>
-                        <li>Microsoft Dynamics</li>
-                    </ul>
-                    <p><strong>Some of the areas where we provide services are:</strong></p>
-                    <ul>
+                        <li>SAP, Oracle Applications (EBS), Microsoft Dynamics</li>
                         <li>Enterprise Resource Planning (ERP)</li>
-                        <li>Enterprise content management (ECM)</li>
-                        <li>Messaging and collaboration</li>
                         <li>Customer Relationship Management (CRM)</li>
                         <li>Business Intelligence (BI)</li>
                         <li>HR Management (HRM)</li>
@@ -162,121 +864,167 @@
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <div class="bento-item medium fade-in">
+                    <img src="images/image21.jpg" alt="Staff Augmentation">
+                    <h3>Staff Augmentation</h3>
+                    <ul>
+                        <li>IT Staff Augmentation</li>
+                        <li>Skill Enhancement Programs</li>
+                        <li>Recruitment Process Outsourcing</li>
+                        <li>Turnkey Recruitment Solutions</li>
+                    </ul>
+                </div>
+
+                <div class="bento-item small fade-in">
                     <img src="images/image23.jpg" alt="Product Testing">
                     <h3>Product Testing</h3>
-                    <p>Product testing has become very dominant in the software industry due to the factors such as globalization and automation of application products besides saving huge amounts in detecting early defect in organizations.</p>
-                    <p>Due to the widespread use of SOA, web services, SaaS, wireless and mobile, the industry requires reliable excellent quality. A strategic approach is required for testing which offers ROI based testing to get flawless and excellent quality product meeting end user requirement.</p>
-                    <p>We provide domain expertise in testing for the ever evolving and ever changing market trends. To keep pace with the fast product upgradation and enhancement, we provide testing at cost effective and reduced life cycle development.</p>
-                    <p><strong>Our portfolio includes:</strong></p>
+                    <p>Strategic ROI-based testing for flawless, excellent quality products.</p>
                     <ul>
-                        <li>Manual Testing</li>
-                        <li>Automation testing</li>
-                        <li>Performance testing</li>
-                        <li>Package application testing for ERP packages</li>
-                        <li>Data centric testing covering test data management</li>
-                        <li>Testing for analytics, cloud and mobility</li>
+                        <li>Manual & Automation Testing</li>
+                        <li>Performance Testing</li>
+                        <li>ERP Package Testing</li>
+                        <li>Data-Centric Testing</li>
+                        <li>Cloud & Mobility Testing</li>
+                    </ul>
+                </div>
+
+                <div class="bento-item small fade-in">
+                    <h3>Domain Expertise</h3>
+                    <p>We have deployed skill sets across multiple industries:</p>
+                    <ul>
+                        <li>Telecom & Communications</li>
+                        <li>Financial Services & Banking</li>
+                        <li>Retail & E-commerce</li>
+                        <li>Insurance</li>
+                        <li>Healthcare</li>
+                        <li>Energy & Utilities</li>
+                        <li>Manufacturing</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COE Solutions Section -->
-    <section id="coe">
-        <div class="container">
+    <section id="coe" class="coe">
+        <div class="coe-container">
             <h2 class="section-title">COE Solutions</h2>
+            <p class="section-subtitle">Center of Excellence in emerging technologies</p>
+
             <div class="coe-grid">
-                <div class="coe-card">
+                <div class="coe-card fade-in">
                     <img src="images/image24.jpg" alt="Enterprise Mobility">
-                    <h3>Enterprise Mobility</h3>
-                    <p>With the fast emerging and evolving new technologies such as smartphone and tablet the need for enterprise mobility has greatly increased. Enterprise mobility has immense potential to help companies leverage contextual datas to help in business growth.</p>
-                    <p>It has become imperative for organizations big/small to incorporate the concept of enterprise mobility which greatly influence/enhance business performance. It offers new business streams, helps organizations unlock employee potential, build customer loyalty and increase strong partnership alliances.</p>
-                    <p>We follow a well structured mobile development process that increases delivery efficiency, client satisfaction and overall product quality. We offer services in mobile application development on all mobile platforms (iPhone / iPad/ Andriod /Black Berry/Windows Mobile 7/Symbian). Team has delivered numerous mobile applications since year 2010.</p>
+                    <div class="coe-card-content">
+                        <h3>Enterprise Mobility</h3>
+                        <p>Enterprise mobility has immense potential to help companies leverage contextual data for business growth.</p>
+                        <p>We offer mobile application development on all platforms: iPhone, iPad, Android, BlackBerry, Windows Mobile, and Symbian. Our team has delivered numerous mobile applications since 2010.</p>
+                    </div>
                 </div>
 
-                <div class="coe-card">
+                <div class="coe-card fade-in">
                     <img src="images/image25.jpg" alt="Big Data Analytics">
-                    <h3>Big Data Analytics</h3>
-                    <p>Big data provides valuable insight in business processes and helps strengthen the core areas in problem solving. It helps companies by providing project delivery within the time frame and renovating the strategy when and where required. It also requires high performance analytics to select what's important and what's not.</p>
-                    <p>Our company provides accurate insight of relevant data using data mining and predictive analysis, text mining, forecasting and optimization. We provide big data, analytics solution to leverage the value of huge and massive data by focusing on the core questions which are business driven and based on customer satisfaction.</p>
+                    <div class="coe-card-content">
+                        <h3>Big Data Analytics</h3>
+                        <p>We provide accurate insights using data mining, predictive analysis, text mining, forecasting and optimization.</p>
+                        <p>Our big data and analytics solutions leverage the value of massive data by focusing on business-driven questions and customer satisfaction.</p>
+                    </div>
                 </div>
 
-                <div class="coe-card">
-                    <img src="images/image26.jpg" alt="SAP">
-                    <h3>SAP</h3>
-                    <p>SAP HANA® Enterprise Cloud empowers you to deploy SAP® Business Suite, SAP NetWeaver® Business Warehouse, and innovative custom SAP HANA applications to support real-time business. This helps you transform your organization for competitive differentiation – with lower risk and cost of an on-premise implementation project.</p>
-                    <p>With SAP HANA's in-memory technology, the agility a company needs to successfully run its business is at their fingertips. SAP HANA takes structures and unstructured data and transforms it to usable information that enables users to make more informed decisions about their business.</p>
-                    <p>Processes that had taken several weeks to accomplish are reduced to seconds. As a result, maintenance costs are reduced, business challenges are met in real-time, and business performance is increased.</p>
+                <div class="coe-card fade-in">
+                    <img src="images/image26.jpg" alt="SAP Solutions">
+                    <div class="coe-card-content">
+                        <h3>SAP HANA</h3>
+                        <p>SAP HANA Enterprise Cloud empowers you to deploy SAP Business Suite and innovative custom applications for real-time business.</p>
+                        <p>With in-memory technology, processes that took weeks are reduced to seconds, decreasing maintenance costs and increasing business performance.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Subscribe Section -->
-    <section class="subscribe">
-        <div class="container">
-            <h2>Subscribe</h2>
-            <p>Sign up to hear from us about current job openings</p>
-            <p style="font-size: 16px; margin-bottom: 20px;">hr@hiringassociates.com</p>
-            <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit">Sign up</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Let's Work Together</h2>
+                <p>We love our customers, so feel free to reach out during normal business hours.</p>
+
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-detail-text">
+                            <h4>Location</h4>
+                            <p>123 S Broad Street, 15th floor<br>Philadelphia, PA-19109</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-detail-text">
+                            <h4>Phone</h4>
+                            <p><a href="tel:2724643131">272 464 3131</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-detail-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:hr@hiringassociates.com">hr@hiringassociates.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="contact-form">
-                <form onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you soon.');">
+                <form>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="your@email.com" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" placeholder="Tell us about your needs..." required></textarea>
                     </div>
-                    <div class="form-group">
-                        <button type="submit">Send</button>
-                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
                 </form>
-                <p style="text-align: center; margin-top: 20px; color: #666; font-size: 12px;">
-                    This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
-                </p>
-            </div>
-            <div class="contact-info" style="text-align: center; margin-top: 40px;">
-                <p style="font-size: 18px; margin-bottom: 10px;">We love our customers, so feel free to visit during normal business hours.</p>
-                <h3 style="margin-top: 20px;">Hiring Associates LLC</h3>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <h3>Hiring Associates</h3>
-                <p>Human Capital Solution Provider</p>
-                <p class="footer-address">
-                    <strong>Hiring Associates LLC</strong><br>
-                    123 S Broad Street, 15th floor, Philadelphia, PA-19109<br>
-                    <a href="tel:2724643131">272 464 3131</a>
-                </p>
-            </div>
-            <div class="footer-bottom">
-                <p>Copyright © <span id="copyright-year"></span> hiringassociates.com - All Rights Reserved.</p>
-            </div>
-        </div>
+        <p>Copyright © 2024 Hiring Associates LLC - All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

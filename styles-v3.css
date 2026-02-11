@@ -822,4 +822,14 @@ footer {
     .form-tabs { flex-direction: row; }
     .tab-btn { padding: 12px 12px; font-size: 0.82rem; }
     .contact-form-wrap { padding: 24px; }
+
+    /* Card body padding reduction for mobile */
+    .about-card-body { padding: 24px; }
+    .about-card-body .card-num { font-size: 2.8rem; top: 12px; right: 16px; }
+    .bento-body { padding: 20px; }
+    .coe-body { padding: 20px; }
+    .why-card { padding: 24px 20px; }
+    .step-content { padding: 0; }
+    .about-cards { gap: 32px; }
+    .section-header { margin-bottom: 40px; }
 }

@@ -70,7 +70,6 @@ nav.scrolled {
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
-nav.hidden { transform: translateY(-100%); }
 
 .nav-inner {
     max-width: 1200px; margin: 0 auto;
@@ -84,10 +83,9 @@ nav.hidden { transform: translateY(-100%); }
     color: #fff;
     transition: color 0.35s;
 }
-.nav-logo img { height: 40px; filter: brightness(0) invert(1); transition: filter 0.35s; }
+.nav-logo img { height: 40px; transition: filter 0.35s; }
 
 nav.scrolled .nav-logo { color: var(--dark); }
-nav.scrolled .nav-logo img { filter: none; }
 
 .nav-menu { display: flex; gap: 32px; align-items: center; }
 .nav-menu a {
@@ -228,8 +226,10 @@ nav.scrolled .hamburger span { background: var(--dark); }
 
 .hero-content {
     position: relative; z-index: 2;
-    max-width: 720px;
-    padding: 0 24px 0 max(24px, calc((100vw - 1200px)/2 + 24px));
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 .hero-badge {
@@ -258,7 +258,7 @@ nav.scrolled .hamburger span { background: var(--dark); }
 
 .hero-sub {
     font-size: 1.05rem; color: rgba(255,255,255,0.7);
-    max-width: 540px; margin-bottom: 36px; line-height: 1.7;
+    max-width: 600px; margin-bottom: 36px; line-height: 1.7;
 }
 .hero-sub strong { color: rgba(255,255,255,0.95); }
 
@@ -716,9 +716,6 @@ nav.scrolled .hamburger span { background: var(--dark); }
     background: var(--surface); border-radius: var(--radius-lg);
     padding: 40px; box-shadow: 0 8px 40px rgba(0,0,0,0.06);
 }
-
-/* Turnstile widget */
-.cf-turnstile { margin-bottom: 20px; }
 
 /* Form status messages */
 .form-status {

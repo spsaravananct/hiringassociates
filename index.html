@@ -8,8 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles-v3.css">
-    <!-- Cloudflare Turnstile -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
     <!-- Cursor glow -->
@@ -419,8 +417,6 @@
                                 <textarea name="message" placeholder=" " required id="client-msg" rows="4"></textarea>
                                 <label for="client-msg">Tell us about your hiring needs...</label>
                             </div>
-                            <!-- Cloudflare Turnstile widget -->
-                            <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="dark"></div>
                             <button type="submit" class="btn btn-accent btn-full">Request Talent</button>
                             <div class="form-status"></div>
                         </form>
@@ -444,8 +440,6 @@
                                 <textarea name="message" placeholder=" " required id="cand-msg" rows="4"></textarea>
                                 <label for="cand-msg">Tell us about your skills...</label>
                             </div>
-                            <!-- Cloudflare Turnstile widget -->
-                            <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="dark"></div>
                             <button type="submit" class="btn btn-accent btn-full">Submit Resume</button>
                             <div class="form-status"></div>
                         </form>
@@ -486,7 +480,6 @@
         window.addEventListener('scroll', () => {
             const y = window.scrollY;
             nav.classList.toggle('scrolled', y > 80);
-            nav.classList.toggle('hidden', y > lastY && y > 400);
             lastY = y;
         });
 
@@ -599,14 +592,6 @@
                     return; // Silently reject bot
                 }
 
-                // Turnstile token check
-                const turnstileInput = form.querySelector('input[name="cf-turnstile-response"]');
-                if (!turnstileInput || !turnstileInput.value) {
-                    statusEl.className = 'form-status error';
-                    statusEl.textContent = 'Please complete the security check.';
-                    return;
-                }
-
                 // Show loading state
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Sending...';
@@ -626,11 +611,6 @@
                         statusEl.className = 'form-status success';
                         statusEl.textContent = 'Thank you! We\'ll be in touch shortly.';
                         form.reset();
-                        // Reset Turnstile widget
-                        if (window.turnstile) {
-                            const widget = form.querySelector('.cf-turnstile');
-                            if (widget) turnstile.reset(widget);
-                        }
                     } else {
                         const json = await res.json().catch(() => ({}));
                         statusEl.className = 'form-status error';
